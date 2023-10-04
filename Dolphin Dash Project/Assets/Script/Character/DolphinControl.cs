@@ -9,18 +9,26 @@ public class DolphinControl : MonoBehaviour
     [SerializeField] private float speed;
     private int CoinCount = 0;
     [SerializeField] private TextMeshProUGUI CoinDisplay;
+    private bool Highestpnt;
+    private Animator anim;
 
 
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        Highestpnt = false;
+        anim = GetComponent<Animator>();
     }
 
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Sea"))
+        {
             Debug.Log("In Water");
+             
+        }
+            
         
         if (collision.gameObject.CompareTag("Collectible"))
         {

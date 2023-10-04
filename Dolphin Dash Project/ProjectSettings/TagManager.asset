@@ -12,6 +12,7 @@ TagManager:
   - Health
   - CoinPanel
   - Target
+  - SeaBottom
   layers:
   - Default
   - TransparentFX
